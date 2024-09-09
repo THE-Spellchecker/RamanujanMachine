@@ -65,7 +65,7 @@ def multiprocess_enumeration(enumerator_class, lhs, poly_search_domain, const_va
     for r in process_results:
         unified_results += r
 
-    # Create another enumerator (should not take time to initiate) and preforme 
+    # Create another enumerator (should not take time to initiate) and perform 
     # the second step using only it
     if lhs:
         enumerator = enumerator_class(lhs, poly_search_domain, const_vals)

@@ -61,7 +61,7 @@ class LHSHashTable(object):
         with open(self.s_name, 'wb') as f:
             pickle.dump(self.lhs_possibilities, f)
 
-        # after init, deleteing self.lhs_possibilities to free unused memory 
+        # after init, deleting self.lhs_possibilities to free unused memory 
         self.lhs_possibilities = None
         print('initializing LHS dict: {}'.format(time() - start_time))
 

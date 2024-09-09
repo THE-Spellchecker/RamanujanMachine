@@ -24,7 +24,7 @@ This project lets you control the equation space scanned by the algorithm.
 To start a new execution, you'll need to configure three parts:
 1. What LHS do you wish to scan
 2. What structure does `an` and `bn` take, and what range do you wish to scan for each coefficient
-3. How to decide if there was a match (precission wise) 
+3. How to decide if there was a match (precision wise) 
 
 you can see examples under `scripts/` folder
 
@@ -90,7 +90,7 @@ enumerator = EfficientGCFEnumerator(
     )
 ```
 
-And thats it! start your execution by running:
+And that's it! start your execution by running:
 ```python
 results = enumerator.full_execution()
 ```

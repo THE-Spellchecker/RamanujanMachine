@@ -120,7 +120,7 @@ class AbstractGCFEnumerator(metaclass=ABCMeta):
 
     def print_results(self, results: List[RefinedMatch], formatting='unicode', convergence_rate=True):
         """
-        pretty print the the results.
+        pretty print the results.
         :param convergence_rate: if True calculate convergence rate and print it as well.
         :param results: list of final results as received from refine_results.
         :param formatting: allowed print formats are 'unicode' and 'latex'

@@ -68,7 +68,7 @@ def gcf_calculation_to_precision(an_iterator, bn_iterator, result_precision, min
         if a_i == 0:
             raise ZeroInAn()
 
-        # a_i is the (i+1)'th item of an, and b_i the the i'th item of bn
+        # a_i is the (i+1)'th item of an, and b_i the i'th item of bn
         tmp_a = q
         tmp_b = p
 

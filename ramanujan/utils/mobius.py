@@ -81,7 +81,7 @@ class MobiusTransform(object):
           :return: True if equal. Else False.
         """
         if not isinstance(other, MobiusTransform):
-            raise TypeError("Comparision of wrong types")
+            raise TypeError("Comparison of wrong types")
         if np.array_equal(self.data, other.data):
             return True
         else:
@@ -143,7 +143,7 @@ class GeneralizedContinuedFraction(object):
 
     def evaluate(self):
         """
-        evaluate numerically the convergent of the the GCF
+        evaluate numerically the convergent of the GCF
         :return: mpmath decimal.
         """
         return self.mobius(None) + self.a_[0]
@@ -211,7 +211,7 @@ class GeneralizedContinuedFraction(object):
 
     def __eq__(self, other):
         if not isinstance(other, GeneralizedContinuedFraction):
-            raise TypeError("Comparision of wrong types")
+            raise TypeError("Comparison of wrong types")
         for i in range(min(len(self.a_), len(other.a_))):
             res = (self.a_[i] == other.a_[i]) and (self.b_[i] == other.b_[i])
             if not res:

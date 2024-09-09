@@ -8,7 +8,7 @@ from lhs_generators import create_standard_lhs
 
 class APITests(unittest.TestCase):
 
-    def test_ESMA_api1(self): # Test full enumeration and search configuration including saving binaries. Might ake a little longer
+    def test_ESMA_api1(self): # Test full enumeration and search configuration including saving binaries. Might take a little longer
         cmd = 'ESMA -out_dir ./tmp -mode search -constant e -cycle_range 2 2 -depth 105 -poly_deg 1' + \
               ' -coeff_lim 2 -no_print'
         cmd = cmd.split(' ')

@@ -9,7 +9,7 @@ from shutil import rmtree
 # Since the BOINC scripts are not a part of the ramanujan package, we'll add their folder to python's path.
 # We must do this step before we can import the functions we wish to test, since we do not export an API to change
 # those script's configurations - its defined in their main function.
-# This can cause IDEs to declare some lines as an unresolved reference. Also, this is  breaking coding conventions :(
+# This can cause IDEs to declare some lines as an unresolved reference. Also, this is breaking coding conventions :(
 current_path = os.getcwd()
 boinc_scripts_dir = os.path.join(current_path, '..', 'scripts', 'boinc')
 sys.path.insert(1, boinc_scripts_dir)

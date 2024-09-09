@@ -3,7 +3,7 @@ import sys
 import argparse
 import pickle
 import lhs_generators
-import ramanujan.constants  # declares constants as sympy Singeltons, "not" used is intended
+import ramanujan.constants  # declares constants as sympy Singletons, "not" used is intended
 
 from time import time
 from enumerate_over_signed_rcf import esma_search_wrapper

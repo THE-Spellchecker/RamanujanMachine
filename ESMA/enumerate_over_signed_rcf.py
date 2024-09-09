@@ -62,14 +62,14 @@ class SignedRcfEnumeration(object):
         1) Enumerates LHS symbolic expressions of functions of the constant, and non repeating sign periods.
         2) Iterates through domain. With low precision extracts a series. Checks if massey-pretty. Saves hits.
         3) Refine results - takes results from (2) and validate them to 100 decimal digits.
-        Note that the structure of the enumeraion (and in fact of the problem), makes it possible to divide
+        Note that the structure of the enumeration (and in fact of the problem), makes it possible to divide
         any domain to separate domains with respect to the signed periods, polynom degrees, but not the coefficients
         limit.
         Custom parametrized functions can be used. In that case the LHS enumeration must be generated externally
         (see lhs_generators.py).
         :param sym_constant: sympy constant
         :param cycle_len_range: range of lengths for the sign sequence's period.
-        :param depth: Number of elements of a series to extract. Relates to length of typical LFSRs  of the consant.
+        :param depth: Number of elements of a series to extract. Relates to length of typical LFSRs  of the constant.
         :param coefficients_limit: Range of coefficients for the rational function on the LHS.
         :param poly_deg: Maximum degree of numerator and denominator polynomials in the rational LHS.
         :param min_deg: Used to exclude lower degree numerator and denominator polynomials in rational LHS from search.
@@ -164,7 +164,7 @@ class SignedRcfEnumeration(object):
                 continue
             var_sym = self.create_rational_symbol(numer, denom)
             var_sym = sympy.simplify(var_sym)
-            if isinstance(var_sym, Rational):  # Simplified expression is a rational number (independant of constant).
+            if isinstance(var_sym, Rational):  # Simplified expression is a rational number (independent of constant).
                 continue
             if abs(var_sym) not in expressions:
                 expressions.add(abs(var_sym))
@@ -175,7 +175,7 @@ class SignedRcfEnumeration(object):
     def find_signed_rcf_conj(self):
         """
         Builds the final domain.
-        Iterates throgh the domain:
+        Iterates through the domain:
         extraction->massey->check->save.
         Additional checks are performed to exclude degenerated cases.
         If a generic enumeration is given will use it instead of enumerating.
@@ -347,7 +347,7 @@ def esma_search_wrapper(constant, custom_enum, poly_deg, coeff_lim,
     :param coeff_lim: Range of coefficients for the rational function on the LHS.
     :param cycle_range: Range of lengths for the sign sequence's period.
     :param min_deg: Used to exclude lower degree numerator and denominator polynomials in rational LHS. (opt)
-    :param depth: Number of elements of a series to extract. Relates to length of typical LFSRs  of the consant. (opt)
+    :param depth: Number of elements of a series to extract. Relates to length of typical LFSRs  of the constant. (opt)
     :param out_dir: Path of director to save result binaries. (opt)
     :param do_print: Print outputs (Used as False primarily for unit tests). (opt)
     :return: A list of results of the form [lhs(sympy), sign_period, a_initialization, a_LFSR].

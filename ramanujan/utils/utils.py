@@ -137,7 +137,7 @@ def plot_gcf_convergens(an_poly_coef, bn_poly_coef, max_iters, divide_interval=1
     p = an_items_iterator.__next__()  # will place a[0] to p
 
     for i, (a_i_1, b_i) in enumerate(zip(an_items_iterator, bn_items_iterator)):
-        # a_i_1 is the (i+1)'th item of an, and b_i the the i'th item of bn
+        # a_i_1 is the (i+1)'th item of an, and b_i the i'th item of bn
         tmp_a = q
         tmp_b = p
 
